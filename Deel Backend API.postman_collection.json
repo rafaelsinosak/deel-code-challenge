@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "e78bdf80-f385-4ee5-8650-a9ddc1b5569b",
+		"name": "Deel Backend API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2340025"
+	},
+	"item": [
+		{
+			"name": "1. Contract by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/contracts/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"contracts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Contracts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/contracts",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"contracts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Unpaid Jobs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/jobs/unpaid",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"jobs",
+						"unpaid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Pay for Job",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"amount\": 100\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/jobs/123/pay",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"jobs",
+						"123",
+						"pay"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Deposit Money",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"amount\": 50\n}"
+				},
+				"url": {
+					"raw": "{{base_url}}/balances/deposit/123",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"balances",
+						"deposit",
+						"123"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. Best Profession",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/admin/best-profession?start=2023-01-01&end=2023-12-31",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"admin",
+						"best-profession"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2023-01-01"
+						},
+						{
+							"key": "end",
+							"value": "2023-12-31"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Best Clients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/admin/best-clients?start=2023-01-01&end=2023-12-31&limit=2",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"admin",
+						"best-clients"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2023-01-01"
+						},
+						{
+							"key": "end",
+							"value": "2023-12-31"
+						},
+						{
+							"key": "limit",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3001",
+			"type": "string"
+		},
+		{
+			"key": "profile_id",
+			"value": "1",
+			"type": "string"
+		}
+	]
+}
